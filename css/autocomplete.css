@@ -1,0 +1,30 @@
+.autocompleter
+{
+   	background-color: white;
+   	border: 1px solid black;
+   	opacity: .90;
+   	filter: alpha(opacity=90);
+   	max-height: 300px;
+	_height: 300px;
+	padding-right: 4px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+   	position: absolute;
+   	z-index: 2;	
+}
+
+.autocompleter .course_listing
+{
+	display: block;
+	margin-top: 1px;
+	
+}
+
+.hover
+{
+	background-color: #99CCFF;
+}
+.no_hover
+{
+	background-color: #FFFFFF;
+}

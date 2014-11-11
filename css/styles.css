@@ -1,0 +1,981 @@
+/*This CSS file is a general CSS file for the entire site. 
+	It includes:
+	-navigation bar
+	-panel/widget graphics
+	-rounded rectangles
+	-log-in
+	-groups
+*/
+
+html, body, #wrapper {
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+html>body, html>body #wrapper {
+    height: auto;
+}
+
+body {
+	margin: 0;
+	font-family: Verdana, Georgia, sans-serif;
+	font-size: 11px;
+	color: #6c7794;
+}
+
+#wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#container {
+	margin: 0;
+	padding: 0 0 10px 0;
+	text-align: left;
+}
+
+#contents {
+	float: left;
+	width: 1000px;
+	_width: 992px;
+	padding-bottom: 50px;
+}
+
+#main {
+	margin-top: 10px;
+	margin-left: 10px;
+/*
+	display: inline;
+	clear: both;
+	float: left;
+	height: auto;
+	width: 985px;
+	_width: 982px;
+	margin-left: 10px;
+	margin-top: 3px;
+	margin-bottom: 5em;*/
+	/*padding: .5em;*/
+}
+
+#footer {
+	position: absolute;
+	margin-left: 25px;
+	bottom: 0;
+	height: 20px;
+	border-top: 1px solid #ccc;
+	text-align: center;
+	clear: both;
+	width: 95%;
+}
+
+/*navigation bar start*/
+#navigation {
+	position: relative;
+	display: block;
+	height: 30px;
+	left: 0px;
+	right: 0px;
+	padding: 0;
+	background-image: url('../images/blackbg.gif');
+	background-repeat: repeat-x;
+}
+
+#navigation span {
+	position: absolute;
+	padding-top: 10px;
+	padding-left: 5px;
+	color: white;
+	font-weight: bold;
+}
+
+#navigation #spacer {
+	width: 15px;
+	height: 30px;
+	display: inline;
+	float: left;
+}
+
+#navigation #buttons {
+	position: absolute;
+	left: 15px;
+	width: 565px;
+	/*display: table-cell;
+	_display: inline;
+	_float: left;*/
+}
+
+#navigation #rightAlign {
+	position: absolute;
+	right: 0;
+	font-weight: bold;
+	padding-right: 20px;
+	padding-top: 10px;
+	color: white;
+}
+
+.buttonLink {
+	border-width: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation a {
+	margin: 0;
+	padding: 0;
+}
+
+/*header start*/
+
+#header {
+	width: 100%;
+	background-image: url('../images/fusion_bg1.jpg');
+	background-repeat: repeat-x;
+	padding: 0;
+} 
+
+#headerBanner {
+	height: 74px;
+}
+
+#header a img {
+	border-width: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+.noBorder {
+	border-width: 0px;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.right {
+	position: absolute;
+	right: 0;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+#main a:link {
+	color: #79addf; 
+	text-decoration:none; 
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#main a:visited {
+	color: #79addf; 
+	text-decoration:none; 
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#main a:hover {
+	color: #79addf;
+	text-decoration: underline;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#footer a:hover {
+	color: #79addf;
+	text-decoration: underline;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#footer a:link {
+	color: #79addf; 
+	text-decoration:none; 
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#footer a:visited {
+	color: #79addf; 
+	text-decoration:none; 
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#footer a:hover {
+	color: #79addf;
+	text-decoration: underline;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#eventForm a:hover {
+	color: #79addf;
+	text-decoration: underline;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#main a:hover.textLink {
+	color: #c5e2ff !important;
+	text-decoration: none !important;
+}
+
+#calendarWrapper {
+	position: absolute;
+	display: block;
+	margin-top: 50px;
+	margin-left: -10px;
+	width: auto;
+	height: auto;
+}
+
+.collapsibleDiv {
+	width: 380px;
+}
+
+#collapseHeader {
+	font-weight: bold;
+	font-size: 11px;
+	border: 1px solid #979cb2;
+	padding: 3px;
+}
+
+#plusMinus {
+	font-weight: 900;
+	text-align: right;
+	float: right;
+	border: 1px solid #979cb2;
+	color: #979cb2;
+	padding: 1px 3px;
+}
+
+a:link {color: WHITE; text-decoration:none;}
+
+a:visited {color: WHITE; text-decoration:none;}
+
+a:hover {
+	color: WHITE;
+	text-decoration: underline;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+	/*text-align: left;*/
+}
+
+.invisible {
+	display: none;
+	visibility: hidden;
+}
+
+.visible {
+	display: block;
+	visibility: visible;
+}
+
+.indent {
+	margin-left: 20px;
+}
+
+.smallIndent {
+	margin-left: 10px !important;
+}
+
+.padLR {
+	padding: 0 4px;
+}
+
+.padTB {
+	padding: 4px 0;
+}
+
+.padALL {
+	padding: 4px;
+}
+
+.spacer {
+	clear: both;
+}
+
+#data {
+	padding: 0px 0px 0px 0px;
+}
+
+h1, h2, h3, h4, h5, h6	{
+	font-family: Myriad, "Gill Sans", "Century Gothic", "Trebuchet MS", "Bitstream Vera Sans", verdana, lucida, arial, helvetica, sans-serif;
+	font-weight: normal;
+	margin-top: 7px;
+	margin-bottom: 2px;
+	letter-spacing: 1px;
+	position: relative;
+}
+
+/*main panel CSS start*/
+
+/*top graphics*/
+#calTop {
+	width: 757px;
+	height: 34px;
+	background-image: url('../images/calTop.gif');
+	background-repeat: no-repeat;
+}
+
+#schedTop {
+	width: 757px;
+	height: 34px;
+	background-image: url('../images/scheduleTop.gif');
+	background-repeat: no-repeat;
+}
+
+#profileTop {
+	width: 757px;
+	height: 34px;
+	background-image: url('../images/myProfile.gif');
+	background-repeat: no-repeat;
+}
+
+#createGroupTop {
+	width: 757px;
+	height: 34px;
+	background-image: url('../images/createGroup.gif');
+	background-repeat: no-repeat;
+	clear: none;
+	padding: 0px 0px 0px 0px;
+}
+
+#editGroupTop {
+	width: 757px;
+	height: 34px;
+	background-image: url('../images/editGroup.gif');
+	background-repeat: no-repeat;
+	clear: none;
+	padding: 0px 0px 0px 0px;
+}
+
+#meetingConfirmationTop {
+	width: 757px;
+	height: 34px;
+	background-image: url('../images/meetingConfirmation.gif');
+	background-repeat: no-repeat;
+	clear: none;
+	padding: 0px 0px 0px 0px;
+}
+
+/*middle graphic*/
+#panel {
+	width: 757px;
+	_width: 759px;
+	height: auto;
+	padding-left: 25px;
+	padding-right: 0px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	background-image: url('../images/calBG.gif');
+	background-repeat: repeat-y;
+	margin-right: -20px;
+	_margin-right: -22px;
+	clear: none;
+}
+
+/*end graphic*/
+#panelBottom {
+	width: 757px;
+	height: 24px;
+	background-image: url('../images/calBottom.gif');
+	background-repeat: no-repeat;
+	clear: none;
+	padding: 0px 0px 0px 0px;
+}
+
+/*display control classes*/
+.floatLeft {
+	display: inline;
+	float: left;
+	clear: none;
+	padding: 0px 0px 0px 0px;
+}
+
+.clear {
+	display: block; 
+	clear: left;
+}
+
+/*main panel CSS end*/
+
+/*widget CSS start*/
+
+/*top graphics*/
+#loginTop {
+	width: 320px;
+	height: 36px;
+	display: block;
+	background-image: url('../images/loginTop.gif');
+	background-repeat: no-repeat;	
+	margin-left: -3px;
+}
+
+#calWidgetTop {
+	width: 220px;
+	height: 36px;
+	display: block;
+	background-image: url('../images/widgetTop.gif');
+	background-repeat: no-repeat;
+}
+
+#selectMembersTop {
+	width: 220px;
+	height: 36px;
+	display: block;
+	background-image: url('../images/selectMembers.gif');
+	background-repeat: no-repeat;
+}
+
+#iCalErrorBox {
+	width: 220px;
+	height: 36px;
+	display: block;
+	background-image: url('../images/importErrors.gif');
+	background-repeat: no-repeat;
+}
+
+#requestMeetingTop {
+	width: 220px;
+	height: 36px;
+	display: block;
+	background-image: url('../images/requestMeeting.gif');
+	background-repeat: no-repeat;
+}
+
+#searchTop {
+	width: 220px;
+	height: 36px;
+	display: block;
+	background-image: url('../images/search.gif');
+	background-repeat: no-repeat;
+}
+
+#addEventTop {
+	width: 220px;
+	height: 36px;
+	display: block;
+	background-image: url('../images/addEvent.gif');
+	background-repeat: no-repeat;
+}
+
+#editEventTop {
+	width: 220px;
+	height: 36px;
+	display: block;
+	background-image: url('../images/editEvent.gif');
+	background-repeat: no-repeat;
+}
+
+#myGroupsTop {
+	width: 220px;
+	height: 36px;
+	display: block;
+	background-image: url('../images/myGroups.gif');
+	background-repeat: no-repeat;
+	padding: 0px 0px 0px 0px;
+}
+
+#confirmTop {
+	width: 220px;
+	height: 36px;
+	display: block;
+	background-image: url('../images/confirmTop.gif');
+	background-repeat: no-repeat;
+	padding: 0px 0px 0px 0px;
+}
+
+#meetingTop {
+	width: 220px;
+	height: 36px;
+	display: block;
+	background-image: url('../images/meetingInformation.gif');
+	background-repeat: no-repeat;
+	padding: 0px 0px 0px 0px;
+}
+
+/*middle graphics*/
+#loginBox {
+	width: 320px;
+	height: auto;
+	display: block;
+	background-image: url('../images/loginBG.gif');
+	background-repeat: repeat-y;
+	padding-left: 10px;
+	padding-top: 10px;
+	margin-bottom: -11px;
+	margin-left: -3px;
+	_margin-right: -450px;
+}
+
+#calWidgetBox {
+	width: 220px;
+	height: auto;
+	display: block;
+	background-image: url('../images/calWidgetBG.gif');
+	background-repeat: no-repeat;
+}
+
+.widgetBox {
+	width: 220px;
+	height: auto;
+	display: block;
+	background-image: url('../images/widgetBG.gif');
+	background-repeat: repeat-y;
+	padding: 0px 0px 0px 0px;
+}
+
+.widgetContent {
+	margin-left: 15px !important;
+	padding: 0px 0px 0px 0px;
+}
+
+/*end graphics*/
+#loginBottom {
+	width: 320px;
+	height: 23px;
+	display: block;
+	background-image: url('../images/loginBottom.gif');
+	background-repeat: no-repeat;
+	margin-left: -3px;
+}
+
+#calWidgetBottom {
+	width: 220px;
+	height: 25px;
+	display: block;
+	background-image: url('../images/calWidgetBottom.gif');
+	background-repeat: no-repeat;
+}
+
+.widgetBottom {
+	width: 220px;
+	height: 25px;
+	display: block;
+	background-image: url('../images/widgetBottom.gif');
+	background-repeat: no-repeat;
+	padding: 0px 0px 0px 0px;
+}
+
+
+.calButton:hover
+{
+	cursor: pointer;
+}
+
+
+/*widget CSS end*/
+
+/*
+#footer {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	background-image: url('../images/blackbg.gif');
+	background-repeat: repeat-x;
+	top: auto;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	padding: 0;
+	display: block;
+	clear: left;
+}*/
+
+/*rounded corners*/
+.roundcont {
+	width: 747px;
+	height: auto;
+	background-color: #aee75c;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	position: relative;
+}
+
+.smallroundcont {
+	width: 306px;
+	background-color: #aee75c;
+	margin-bottom: 10px;
+	margin-left: 5px;
+}
+
+.roundcont p {
+	/*height: 100px;*/
+	margin-left: 30px;
+	margin-top: 15px;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.roundcont span {
+	margin: 0 15px;
+	color: white;
+	/*font-size: 14px;
+	font-weight: bold;*/
+}
+
+.smallroundcont span {
+	margin: 0 15px;
+	font-weight: bold;
+	color: white;
+	font-size: 14px;
+}
+
+.roundtop { 
+	background: url(../images/tr.gif) no-repeat top right; 
+}
+
+.roundbottom {
+	background: url(../images/br.gif) no-repeat top right; 
+}
+
+.roundcont-f {
+	width: 747px;
+	height: auto;
+	background-color: #f64b4b;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	position: relative;
+}
+
+.smallroundcont-f {
+	width: 306px;
+	background-color: #f64b4b;
+	margin-bottom: 10px;
+	margin-left: 5px;
+}
+
+.roundcont-f p {
+	/*height: 100px;*/
+	margin-left: 30px;
+	margin-top: 15px;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.roundcont-f span {
+	margin: 0 15px;
+	color: white;
+	/*font-size: 14px;
+	font-weight: bold;*/
+}
+
+.smallroundcont-f span {
+	margin: 0 15px;
+	font-weight: bold;
+	color: white;
+	font-size: 14px;
+}
+
+.roundtop-f { 
+	background: url(../images/tr-f.gif) no-repeat top right; 
+}
+
+.roundbottom-f {
+	background: url(../images/br-f.gif) no-repeat top right; 
+}
+
+img.corner {
+   width: 15px;
+   height: 15px;
+   border: none;
+   display: block !important;
+}
+/*rounded corners end*/
+
+/*groups css*/
+.group {
+	padding: 2px 5px;
+	border-bottom: 1px solid #ccc;
+	width: 160px;
+}
+
+.groupOn {
+	background-color: #79addf;
+	color: white;
+	padding: 2px 5px;
+	border-bottom: 1px solid #ccc;
+	width: 160px;
+	_cursor: pointer;
+}
+
+.groupOff {
+	background-color: white;
+	color: #79addf;
+	padding: 2px 5px;
+	border-bottom: 1px solid #ccc;
+	width: 160px;
+}
+
+#groupTitle {
+	font-weight: bold;
+	font-size: 20px;
+	color: #555;
+	margin-left: 3px;
+	margin-top: -5px;
+}
+
+/*
+#until {
+	font-size: 10px;
+	color: #555;
+	margin-left: 3px;
+	margin-bottom: 15px;
+}
+*/
+#member_selector {
+	min-height: 30px;
+}
+
+#membersLabel {
+	position: relative;
+	background-color: #79addf;
+	color: white;
+	font-weight: bold;
+	width: 680px;
+	padding: 2px 10px;
+	margin-top: 10px;
+}
+
+.membersHeader {
+	position: relative;
+	width: 680px;
+	display: block;
+	background-color: #ccc/*#cdd4d4*/;
+	font-weight: bold;
+	padding: 2px 10px;
+}
+
+.membersHeader div {
+	display: table-cell;
+	_display: inline;
+	_float: left;
+}
+
+.memberInfo {
+	position: relative;
+	width: 678px;
+	display: block;
+	padding: 2px 10px;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+.memberInfo div {
+	display: table-cell;
+	_display: inline;
+	_float: left;
+}
+
+#editDetails {
+	position: relative;
+	width: 680px;
+	display: block;
+	padding: 2px 10px;
+	margin-top: 20px;
+	/*margin-bottom: 20px;*/
+	margin-left: -50px;
+}
+
+#groupDetails {
+	position: relative;
+	width: 680px;
+	display: block;
+	margin-left: 5px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.groupSpace {
+	position: relative;
+	width: 700px;
+	_width: 650px;
+	display: block;
+	_margin-left: 50px !important;
+	/*margin-top: 10px;*/
+	padding-left: 5px;
+}
+
+.unconfirmed {
+	background-color: pink;
+}
+
+.untilDateClass {
+	margin-top: -10px;
+}
+
+#untilDate {
+	margin-top: -5px;
+}
+
+/*end groups css*/
+
+/*login css*/
+#newUsers {
+	border-top: 1px solid #ccc;
+	margin-left: 15px;
+	margin-top: 10px;
+	_margin-bottom: 10px;
+	padding-top: 10px;
+	width: 270px !important;
+	clear: left;
+}
+
+#newUsers p {
+	text-align: center;
+}
+
+#splash {
+	width: 570px;
+	_width: 500px;
+	height: 500px;
+	border-left: 1px solid #ccc;
+	margin-left: 3px;
+	padding-left: 10px;
+}
+
+#splash p {
+	width: 570px;
+	_width: 500px;
+	font-size: 12px;
+	margin-left: 10px;
+}
+/*end login css*/
+
+.disabled {
+	color: #cccccc;
+}
+
+.enabled {
+	color: #6c7794;
+}
+
+.spanRow {
+	width: 95px;
+	float: left;
+	display: block;
+	margin-right: 10px;
+	color: #999;
+}
+
+.requested {
+	width: 90px;
+	float: left;
+	display: block;
+
+	font-weight: bolder;
+}
+
+.chunk {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 5px !important;
+	_width: 180px;
+}
+
+.upchunk {
+	border-top: 1px solid #ccc;
+	margin-top: 5px !important;
+	padding-top: 5px !important;
+}
+
+.requestLabel {
+	font-weight: bold;
+	margin-bottom: 5px !important;
+	color: #999;
+}
+
+.recurrenceLabel {
+	margin-top: 5px !important;
+	color: #999;
+}
+
+.block {
+	margin-left: 10px;
+	width: 600px;
+}
+
+#submitDiv {
+	border-top: 1px solid #ccc;
+	margin-top: 5px;
+}
+
+.bold {
+	font-weight: bold;
+	margin-bottom: 5px !important;
+}
+
+.indent {
+	margin-left: 10px !important;
+}
+
+.paragraph {
+	margin-top: 10px;
+	margin-left: 30px;
+	width: 500px;
+}
+
+.inline {
+	display: inline;
+}
+
+.twoButtons{
+	width: 250px;
+}
+
+.gray {
+	color: #ccc !important;
+}
+
+#loading {
+	background-color: #999;
+   	opacity: .20;
+   	filter: alpha(opacity=20);
+	z-index: 5;
+	position: absolute;
+	top: 140px;
+	left: 20px;
+}
+
+#buffer {
+	position: absolute;
+	left: 340px;
+	z-index: 100 !important;
+}
+
+#buffer #loading_image {
+	position: absolute;
+	bottom: 0;
+	/*z-index: 100 !important;*/
+}
+
+.accepted {
+	color: green;
+	font-weight: bold;
+}
+
+/**********
+List Styles
+**********/
+ul.plain {
+	padding: 0;
+}
+
+ul.plain li {
+	list-style-type: none; 
+}

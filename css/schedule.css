@@ -1,0 +1,573 @@
+/*This CSS file controls the calendar interface*/
+
+#calendarNav {
+	position: relative;
+	width: 698px;
+	_width: 700px;
+	display: block;
+	font-size: 14px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+#calendarNav div {
+	display: inline;
+}
+
+/*
+	CSS for the Left and Right navigation buttons in the calendar header.
+*/
+#navLeft {
+	position: absolute;
+   	left: 0;
+	border: 1px solid #cccccc;
+	color: #cccccc;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+#navLeft:hover {
+	background-color: #ededed;
+	color: white;
+	cursor: pointer;
+}
+
+.navIEOver {
+	background-color: #ededed;
+	color: white;
+	cursor: pointer;
+}
+
+.navIEDefault {
+	background-color: white;
+	color: #cccccc;
+}
+
+#navRight {
+	position: absolute;
+   	right: 0;
+	border: 1px solid #cccccc;
+	color: #cccccc;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+#navRight:hover {
+	background-color: #ededed;
+	color: white;
+	cursor: pointer;
+}
+
+#calendarHeader {
+	width: 698px;
+	_width: 699px;
+	display: block;
+	border-top: 1px solid #979cb2;
+}
+
+#calendarHeader #spacer
+{
+	width: 59px;
+	_width: 60px;
+	border-left: 1px solid #979cb2;
+}
+
+#calendarHeader div {
+	display: table-cell;
+	display: inline;
+	float: left;
+	/*width: 100px;*/
+	width: 90px;
+	border-right:1px solid #979cb2;
+	border-bottom:1px solid #979cb2;
+	text-align: center;
+}
+
+/*
+	Highlights the current day in the calendar.
+*/
+.today {
+	background-image: url('../images/today.gif');
+	background-repeat: repeat-x;
+	color: white;
+}
+
+.everyOtherDay {
+	background-image: url('../images/date.jpg');
+	background-repeat: repeat-x;
+}
+
+.time {
+	height: 35px;
+	padding-right: 5px;
+	border-bottom:1px solid #cccccc;
+	background-color: white;
+}
+
+.half {
+	height: 17px;
+	border-bottom:1px solid #d8deeb;
+	font-weight: bold;
+}
+
+.hour {
+	height: 17px;
+	border-bottom:1px solid #cccccc;
+	font-weight: bold;
+}
+
+.title {
+	width: 100%;
+}
+
+.titleSpan {
+	position: absolute;
+	top: 10px;
+}
+
+.timeColHours {
+	float: left;
+	width: 60px;
+	_width: 61px;
+	border-right:1px solid #979cb2;
+	text-align: right;
+	background-color: white;
+}
+
+.timeColEvents {
+	float: left;
+	/*width: 100px;*/
+	width: 90px;
+	height: auto;
+	border-right:1px solid #979cb2;
+	background-color: white;
+}
+
+#main #calendar .timeColHours .time span
+{
+	color: #cccccc;
+}
+
+/*GROUP EVENTS START*/
+.startGroup {
+	height: 17px;
+	background-color: #555555;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-top: 1px solid #555555;
+}
+.middleGroup {
+	height: 17px;
+	background-color: #555555;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid #555555;
+}
+.endGroup {
+	height: 17px;
+	background-color: #555555;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid #555555;
+}
+
+/*Note: fadeIn and fadeOut css is for events that start/end on :15 or :45.*/
+.fadeInGroup {
+	background-image: url('../images/groupIn.gif');
+	background-color: white;
+	background-repeat: no-repeat;
+	border: none;
+	margin-top: 1px !important;
+}
+.fadeOutGroup {
+	background-image: url('../images/groupOut.gif');
+	background-color: white;
+	background-repeat: no-repeat;	
+	border: none;
+}
+.halfHourGroup {
+	height: 17px;
+	background-color: #555555;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid #555555;
+}
+
+
+/*CLASS EVENTS START*/
+.Class {
+	background-color: #efadab;
+	border: 1px solid #993333;
+	color: white;
+	padding-left: 3px;
+	padding-top: 2px;
+}
+
+.startClass {
+	position: relative;
+	height: 15px;
+	background-color: #efadab;
+	border-left: 1px solid #993333;
+	border-right: 1px solid #993333;
+	border-top: 1px solid #993333;
+	color: white;
+	padding-left: 3px;
+	padding-top: 2px;
+}
+.middleClass {
+	height: 18px;
+	background-color: #efadab;
+	border-left: 1px solid #993333;
+	border-right: 1px solid #993333;
+	
+}
+.endClass {
+	height: 17px;
+	background-color: #efadab;
+	border-left: 1px solid #993333;
+	border-right: 1px solid #993333;
+	border-bottom: 1px solid #993333;
+}
+.halfHourClass {
+	position: relative;
+	height: 14px;
+	background-color: #efadab;
+	border: 1px solid #993333;
+	color: white;
+	padding-left: 3px;
+	padding-top: 2px;
+	font-weight: bold;
+}
+.fadeInClass {
+	background-image: url('../images/classIn.gif');
+	background-color: white;
+	background-repeat: no-repeat;
+	border: none;
+	margin-top: 1px !important;
+}
+.fadeOutClass {
+	background-image: url('../images/classOut.gif');
+	background-color: white;
+	background-repeat: no-repeat;	
+	border: none;
+}
+
+
+/*WORK EVENTS START*/
+.startWork {
+	position: relative;
+	height: 15px;
+	background-color: #9c9ccd;
+	border-left: 1px solid #333366;
+	border-right: 1px solid #333366;
+	border-top: 1px solid #333366;
+	color: white;
+	padding-left: 3px;
+	padding-top: 2px;
+}
+.middleWork {
+	height: 18px;
+	background-color: #9c9ccd;
+	border-left: 1px solid #333366;
+	border-right: 1px solid #333366;
+}
+.endWork {
+	height: 17px;
+	background-color: #9c9ccd;
+	border-left: 1px solid #333366;
+	border-right: 1px solid #333366;
+	border-bottom: 1px solid #333366;
+}
+.halfHourWork {
+	position: relative;
+	height: 14px;
+	background-color: #9c9ccd;
+	border: 1px solid #333366;
+	color: white;
+	padding-left: 3px;
+	padding-top: 2px;
+	font-weight: bold;
+}
+.fadeInWork {
+	background-image: url('../images/workIn.gif');
+	background-color: white;
+	background-repeat: no-repeat;
+	border: none;
+	margin-top: 1px !important;
+}
+.fadeOutWork {
+	background-image: url('../images/workOut.gif');
+	background-color: white;
+	background-repeat: no-repeat;	
+	border: none;
+}
+
+
+/*PERSONAL EVENTS START*/
+.Personal
+{
+	background-color: #8aceac;
+	border: 1px solid #006600;
+	color: white;
+	padding-left: 3px;
+	padding-top: 2px;
+}
+
+
+.startPersonal {
+	position: relative;
+	height: 15px;
+	background-color: #8aceac;
+	border-left: 1px solid #006600;
+	border-right: 1px solid #006600;
+	border-top: 1px solid #006600;
+	color: white;
+	padding-left: 3px;
+	padding-top: 2px;
+}
+.middlePersonal {
+	height: 18px;
+	background-color: #8aceac;
+	border-left: 1px solid #006600;
+	border-right: 1px solid #006600;
+}
+.endPersonal {
+	height: 17px;
+	background-color: #8aceac;
+	border-left: 1px solid #006600;
+	border-right: 1px solid #006600;
+	border-bottom: 1px solid #006600;
+}
+.halfHourPersonal {
+	position: relative;
+	height: 14px;
+	background-color: #8aceac;
+	border: 1px solid #006600;
+	color: white;
+	padding-left: 3px;
+	padding-top: 2px;
+	font-weight: bold;
+}
+.fadeInPersonal {
+	background-image: url('../images/personalIn.gif');
+	background-color: white;
+	background-repeat: no-repeat;
+	border: none;
+	margin-top: 1px !important;
+}
+.fadeOutPersonal {
+	background-image: url('../images/personalOut.gif');
+	background-color: white;
+	background-repeat: no-repeat;	
+	border: none;
+}
+
+/*MEETING EVENTS START*/
+.startMeeting {
+	position: relative;
+	height: 15px;
+	background-color: #f7be76;
+	border-left: 1px solid #CC6600;
+	border-right: 1px solid #CC6600;
+	border-top: 1px solid #CC6600;
+	color: white;
+	padding-left: 3px;
+	padding-top: 2px;
+}
+.middleMeeting {
+	height: 18px;
+	background-color: #f7be76;
+	border-left: 1px solid #CC6600;
+	border-right: 1px solid #CC6600;
+}
+.endMeeting {
+	height: 17px;
+	background-color: #f7be76;
+	border-left: 1px solid #CC6600;
+	border-right: 1px solid #CC6600;
+	border-bottom: 1px solid #CC6600;
+}
+.halfHourMeeting {
+	position: relative;
+	height: 14px;
+	background-color: #f7be76;
+	border: 1px solid #CC6600;
+	color: white;
+	padding-left: 3px;
+	padding-top: 2px;
+	font-weight: bold;
+}
+.fadeInMeeting {
+	background-image: url('../images/meetingIn.gif');
+	background-color: white;
+	background-repeat: no-repeat;
+	margin-top: 1px !important;
+	border: none;
+}
+.fadeOutMeeting {
+	background-image: url('../images/meetingOut.gif');
+	background-color: white;
+	background-repeat: no-repeat;	
+	border: none;
+}
+
+/*TEMPORARY MEETING EVENTS START*/
+.startTempMeeting {
+	position: relative;
+	height: 15px;
+	background-color: #FFFF99;
+	border-left: 1px solid #fbcd13;
+	border-right: 1px solid #fbcd13;
+	border-top: 1px solid #fbcd13;
+	color: black;
+	padding-left: 3px;
+	padding-top: 2px;
+}
+.middleTempMeeting {
+	height: 18px;
+	background-color: #FFFF99;
+	border-left: 1px solid #fbcd13;
+	border-right: 1px solid #fbcd13;
+}
+.endTempMeeting {
+	height: 17px;
+	background-color: #FFFF99;
+	border-left: 1px solid #fbcd13;
+	border-right: 1px solid #fbcd13;
+	border-bottom: 1px solid #fbcd13;
+}
+.halfHourTempMeeting {
+	position: relative;
+	height: 14px;
+	background-color: #FFFF99;
+	border: 1px solid #fbcd13;
+	color: black;
+	padding-left: 3px;
+	padding-top: 2px;
+	font-weight: bold;
+}
+.fadeInTempMeeting {
+	background-image: url('../images/tempIn.gif');
+	background-color: white;
+	background-repeat: no-repeat;
+	border: none;
+	margin-top: 1px !important;
+}
+.fadeOutTempMeeting {
+	background-image: url('../images/tempOut.gif');
+	background-color: white;
+	background-repeat: no-repeat;	
+	border: none;
+}
+
+.block {
+	display: block;
+	clear: both;
+}
+
+/*DELETE (X) START*/
+.delete {
+	position: absolute;
+	right: 0;
+	padding-right: 3px;
+	font-weight: bold;
+	/*background-color: white;*/
+}
+
+#main .delete a:link {
+	color: white;
+	text-decoration: none;
+}
+
+#main .delete a:visited {color: WHITE; text-decoration:none;}
+
+#main .delete a:hover {
+	color: WHITE;
+	text-decoration: none;
+}
+
+.delete:hover {
+	cursor: pointer;
+}
+
+.delete_dialog {
+   	border: 1px solid black;
+	background-color: white;
+	color: #1E90FF;
+   	opacity: .90;
+   	filter: alpha(opacity=90);
+	padding: 0px 4px;
+	width: 100px;
+   	position: absolute;
+	left: 60px;
+   	z-index: 2;	
+}
+
+.opaque
+{
+	background-color: #999;
+   	opacity: .20;
+   	filter: alpha(opacity=20);
+	z-index: 10;
+	/*visibility: visible;*/
+	display: block;
+	position: absolute;
+	top: 348px;
+	left: 785px;
+	padding-left:25px;
+	_padding-left: 0px;
+	/*width: 190px !important;*/
+}
+
+.delete_dialog div {
+    font-size: 12px;
+	text-decoration: underline;
+	cursor: pointer;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+/*Time slots that are before 8am and after 6pm are shaded gray because they are "off-hours"*/
+.shaded {
+	background-color: #eeeeee !important;
+}
+
+.current_time {
+	border-top: 2px dotted #79addf;
+}
+
+/*CSS for the member selector*/
+#groupSelect {
+	margin-bottom: 15px;
+	margin-left: 5px;
+	width: 180px;
+}
+
+#memberList {
+	margin-top: -5px;	
+}
+	
+#memberList li {
+	margin-left: 10px;
+	padding: 3px 0px;
+}
+
+#memberListBox img {
+	margin-left: 1px;
+}
+
+.fakeCheckbox {
+	border: 1px solid #1c5180;
+	background-image: url('../images/checkBG.gif');
+	background-repeat: no-repeat; 
+	width: 11px;
+	height: 11px;
+	display: inline;
+	float: left;
+	clear: left;
+	margin-right: 5px;
+}

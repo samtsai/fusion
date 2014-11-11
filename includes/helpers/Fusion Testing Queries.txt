@@ -1,0 +1,61 @@
+Person IDs
+Sam - 138
+Trey - 139
+Matt - 2,003,401,249,300 or just 226
+
+Type IDs
+Fusion Meeting - 4
+Temp Meeting - 5
+Meeting - 6
+
+Meeting & Event IDs
+Weekly Fusion Meeting - 550 , 5908
+
+Event Details
+SELECT event_id, type_name, FROM_UNIXTIME(start_datetime), FROM_UNIXTIME(end_datetime) FROM tblEvent
+LEFT JOIN tblType USING (type_id)
+WHERE event_id = ______ (ex 5908)
+
+All of a Person's Events
+SELECT pereve.person_id, pereve.event_id, response, name, description
+FROM tblPersonEvent AS pereve
+LEFT JOIN tblEvent AS eve ON pereve.event_id = eve.event_id
+LEFT JOIN tblEventDescription AS evedes ON pereve.event_id = evedes.event_id
+LEFT JOIN tblDescription AS des ON des.description_id = evedes.description_id
+WHERE pereve.person_id = 138
+
+All of a Person's Fusion Meetings
+SELECT pereve.person_id, pereve.event_id, response, name, description
+FROM tblPersonEvent AS pereve
+LEFT JOIN tblEvent AS eve ON pereve.event_id = eve.event_id
+LEFT JOIN tblEventDescription AS evedes ON pereve.event_id = evedes.event_id
+LEFT JOIN tblDescription AS des ON des.description_id = evedes.description_id
+WHERE pereve.person_id = 138 AND type_id = 4
+
+All Meeting Events for a Person
+SELECT meeting_id, mtgeve.event_id, priority, rejected, person_id, response 
+FROM tblMeetingEvent as mtgeve
+LEFT JOIN tblPersonEvent as pereve USING (event_id)
+WHERE person_id = 138
+
+All Meeting Events with Names & Descriptions for a Person
+SELECT meeting_id, mtgeve.event_id, priority, rejected, person_id, response, name, description 
+FROM tblMeetingEvent as mtgeve
+LEFT JOIN tblPersonEvent as pereve USING (event_id)
+LEFT JOIN tblEventDescription USING (event_id)
+LEFT JOIN tblDescription USING (description_id)
+WHERE person_id = 138
+
+Confirmed Meetings with Names & Descriptions
+SELECT mtgeve.*, name, description FROM tblMeeting as mtg
+LEFT JOIN tblMeetingEvent as mtgeve USING (meeting_id)
+LEFT JOIN tblEventDescription USING (event_id)
+LEFT JOIN tblDescription USING (description_id)
+WHERE person_id = 138
+
+
+SELECT mtg.person_id, mtg.meeting_id, name, description FROM tblMeeting AS mtg
+LEFT JOIN tblPersonEvent USING (person_id)
+LEFT JOIN tblEventDescription USING (event_id)
+LEFT JOIN tblDescription USING (description_id)
+WHERE mtg.person_id = 138
