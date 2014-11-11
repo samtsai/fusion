@@ -1,18 +1,4 @@
 <?php
-    $url=parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-    $server = $url["host"];
-    $username = $url["user"];
-    $password = $url["pass"];
-    $db = substr($url["path"],1);
-
-    mysqli_connect($server, $username, $password);
-
-
-    mysqli_select_db($db);
-?>
-
-<?php
 class ConnectionPooler {
 	private static $poolerInstance;
 	private $dbConn;
@@ -52,12 +38,12 @@ class ConnectionPooler {
 			$this->connAttempts++;
 			//echo "Connecting: attempt " . $this->connAttempts . "\n";
 
-			$this->dbConn = mysql_connect($this->host, $this->userid, $this->pswd, true);
+			$this->dbConn = mysqli_connect($this->host, $this->userid, $this->pswd);
 
 			if (!$this->dbConn)
 				die("Could not make connection to the db server.");
 
-			mysql_select_db($this->db_name, $this->dbConn);
+			mysqli_select_db($this->db_name, $this->dbConn);
 
 			if (mysql_error())
 				die("Could not select database once connected to the db server.");
