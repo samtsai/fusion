@@ -13,9 +13,9 @@ class ConnectionPooler {
 	protected function __construct() {
 
 		$dbHost = 'localhost';
-		$dbUser = 'fusion';
-		$dbPswd = 'shirley';
-		$Database = 'fusion';
+		$dbUser = 'bc53787cd61947';
+		$dbPswd = 'c32e2011';
+		$Database = 'heroku_bcb7b2aa268e811';
 
 		$this->connAttempts = 0;
 		$this->host = $dbHost;
@@ -32,7 +32,7 @@ class ConnectionPooler {
 	}
 
 	public function getConnection() {
-		
+
 		if (!$this->dbConn) {
 			$this->connAttempts++;
 			//echo "Connecting: attempt " . $this->connAttempts . "\n";
