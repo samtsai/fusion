@@ -1,4 +1,18 @@
 <?php
+    $url=parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+    $server = $url["host"];
+    $username = $url["user"];
+    $password = $url["pass"];
+    $db = substr($url["path"],1);
+
+    mysqli_connect($server, $username, $password);
+
+
+    mysqli_select_db($db);
+?>
+
+<?php
 class ConnectionPooler {
 	private static $poolerInstance;
 	private $dbConn;
@@ -11,11 +25,12 @@ class ConnectionPooler {
 	private $db_name;
 
 	protected function __construct() {
+		$url=parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-		$dbHost = 'localhost';
-		$dbUser = 'bc53787cd61947';
-		$dbPswd = 'c32e2011';
-		$Database = 'heroku_bcb7b2aa268e811';
+		$dbHost = $url["host"];
+		$dbUser = $url["user"];
+		$dbPswd = $url["pass"];
+		$Database = substr($url["path"],1);
 
 		$this->connAttempts = 0;
 		$this->host = $dbHost;
