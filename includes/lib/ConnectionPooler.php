@@ -39,8 +39,12 @@ class ConnectionPooler {
 			//echo "Connecting: attempt " . $this->connAttempts . "\n";
 
 			$this->dbConn = mysqli_connect($this->host, $this->userid, $this->pswd);
-			
-			mysqli_select_db($this->db_name, $this->dbConn);
+
+			if (!$this->dbConn) {
+					die("Database connection failed: " . mysqli_error());
+			}
+
+			mysqli_select_db($this->dbConn, $this->db_name);
 		}
 
 		return $this->dbConn;
