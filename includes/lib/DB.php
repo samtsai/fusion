@@ -17,7 +17,7 @@ class DB {
 	public function query($sql) {
 		if ($this->isConnected()) {
 			$this->lastQuery = $sql;
-			$this->result = mysql_query($sql, $this->connPooler->getConnection());
+			$this->result = mysqli_query($sql, $this->connPooler->getConnection());
 			return $this->result;
 		} else {
 			return FALSE;
@@ -30,40 +30,40 @@ class DB {
 
 	public function numReturned() {
 		if ($this->result != null) {
-			return mysql_num_rows($this->result);
+			return mysqli_num_rows($this->result);
 		}
 		return 0;
 	}
 
 	public function numAffected() {
-		return mysql_affected_rows($this->connPooler->getConnection());
+		return mysqli_affected_rows($this->connPooler->getConnection());
 	}
 
 	public function endQuery() {
-		mysql_free_result($this->result);
+		mysqli_free_result($this->result);
 	}
 
 	public function getRow() {
 		//echo "<br /><br />" . $this->lastQuery;
-		return mysql_fetch_array($this->result);
+		return mysqli_fetch_array($this->result);
 	}
 
 	public function lastInsertID() {
-		return mysql_insert_id($this->connPooler->getConnection());
+		return mysqli_insert_id($this->connPooler->getConnection());
 	}
 
 	public function escapeString($str) {
-		return mysql_escape_string($str);
+		return mysqli_escape_string($str);
 	}
 
 	public function error() {
-		return mysql_error($this->connPooler->getConnection());
+		return mysqli_error($this->connPooler->getConnection());
 	}
 
 	public function getRecords($user_query) {
-		
+
 		$user_query = $this->cleanStr($user_query);
-		
+
 		if ($this->verifyQuery($user_query, "select")) {
 			if ($this->query($user_query)) {
 				return $this->result;
@@ -77,10 +77,10 @@ class DB {
 
 	public function getScalar($user_query) {
 
-		//  This function returns a single value from the database. 
+		//  This function returns a single value from the database.
 
 		if ($this->getRecords($user_query) && $this->numReturned()) {
-			$scalar = stripslashes(trim(mysql_result($this->result, 0)));
+			$scalar = stripslashes(trim(mysqli_result($this->result, 0)));
 			return $scalar;
 		} else
 			return FALSE;
@@ -89,7 +89,7 @@ class DB {
 
 	public function getArray($user_query) {
 
-		//  This function returns a simple array from the database.  
+		//  This function returns a simple array from the database.
 
 		if ($this->getRecords($user_query) && $this->numReturned()) {
 			while ($row = $this->getRow()) {
@@ -102,7 +102,7 @@ class DB {
 	} // end of getArray()
 
 	public function get2DArray($user_query) {
-		//  This function returns an associative array from the database.  
+		//  This function returns an associative array from the database.
 
 		if ($this->getRecords($user_query) && $this->numReturned()) {
 			while ($row = $this->getRow()) {
@@ -119,7 +119,7 @@ class DB {
 			$numColumns = count($fields_array);
 			$one_record = array ();
 			//echo "GETTING ONE RECORD: SELECT * FROM $table $conditions <br/>";
-			
+
 			if ($this->getRecords("SELECT * FROM $table $conditions")) {
 				while ($row = $this->getRow()) {
 					for ($i = 0; $i < $numColumns; $i ++) {
@@ -136,7 +136,7 @@ class DB {
 	} // end of getOneRecord()
 
 	public function insertRecord($user_query) {
-		
+
 		$user_query = $this->cleanStr($user_query);
 
 		if ($this->query($user_query)) {
@@ -145,7 +145,7 @@ class DB {
 		} else {
 			return FALSE;
 		}
-	
+
 	}
 
 	public function updateRecord($user_query) {
@@ -190,7 +190,7 @@ class DB {
 		if (empty ($query) || empty ($type)) {
 			return FALSE;
 		}
-			
+
 		if ($type == 'select') {
 			if (eregi("^SELECT[[:alnum:][:space:][:punct:]]+FROM[[:alnum:][:space:][:punct:]]+$", $query)) {
 				return TRUE;

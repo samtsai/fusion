@@ -243,11 +243,11 @@ function signOn() {
 				$nick = normalize($nick[1]);
 				$dbpass="PASSWORD";
 				$chosenDB="DATABASE";
-				mysql_connect("localhost","root",$dbpass); 
-				mysql_select_db($chosenDB); 
+				mysqli_connect("localhost","root",$dbpass); 
+				mysqli_select_db($chosenDB); 
 				$SQL="Select Response FROM Responses WHERE Input='$search_result'";
-				$query=mysql_query($SQL);
-				list($response) = mysql_fetch_row($query);
+				$query=mysqli_query($SQL);
+				list($response) = mysqli_fetch_row($query);
 				sendFlap(SFLAP_TYPE_DATA,'toc_send_im ' . $nick . ' "'.$response.'"');
 			}
 		

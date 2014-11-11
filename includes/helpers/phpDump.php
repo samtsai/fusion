@@ -281,9 +281,9 @@
         
         function dumpMysql($input) {
         
-            $rows = mysql_num_rows($input);
+            $rows = mysqli_num_rows($input);
             
-            $row = mysql_fetch_assoc($input);
+            $row = mysqli_fetch_assoc($input);
             
             $colspan = count($row);
                 
@@ -307,16 +307,16 @@
             
                 if($rows) {
                 
-                    mysql_data_seek($input, 0);    
+                    mysqli_data_seek($input, 0);    
                 
-                    while($row = mysql_fetch_assoc($input)) {
+                    while($row = mysqli_fetch_assoc($input)) {
                     
                         $output .= '<tr>';
                         
                             $cols = 0;
                             foreach($row as $key => $value) {
                             
-                                $mySQLtype = mysql_field_type($input, $cols);
+                                $mySQLtype = mysqli_field_type($input, $cols);
                                 
                                 $value = $this->mysqlType($mySQLtype, $value);
         
@@ -337,7 +337,7 @@
                     
                     }
                     
-                    mysql_data_seek($input, 0);    
+                    mysqli_data_seek($input, 0);    
                     
                 }
                         
